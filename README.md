@@ -12,9 +12,15 @@ Plataforma web para conectar restaurantes con excedentes de comida y personas be
 
 Nombre del equipo: Umizumi
 
+## Categoría del concurso
+
+Participamos en la categoría 3: Hack for Humanity Challenge (reto de The AI Collective).
+
+Este reto busca el mejor proyecto que atienda una problemática local identificable de Ciudad del Carmen o de Campeche con uso de tecnología. Es una categoría que permite usar cualquier IA comercial (Claude, Gemini, ChatGPT, etc.) de cualquier forma, siempre con un enfoque claro de impacto social y solución real a una necesidad local.
+
 ## Idea del proyecto
 
-Nutriendo la Isla nace como una solución digital para reducir el desperdicio de alimentos y, al mismo tiempo, apoyar a personas que necesitan acceso a comida de forma segura y organizada. La plataforma permite a restaurantes publicar excedentes, a beneficiarios solicitar acceso y a revisores validar las solicitudes de manera humana y transparente.
+Nutriendo la Isla nace como una solución digital para reducir el desperdicio de alimentos y, al mismo tiempo, apoyar a personas que necesitan acceso a comida de forma segura y organizada en Ciudad del Carmen, Campeche. La plataforma permite a restaurantes publicar excedentes, a beneficiarios solicitar acceso y a revisores validar las solicitudes de manera humana y transparente.
 
 El proyecto se desarrolla como una demo local con datos ficticios, enfocada en la responsabilidad social, la trazabilidad de procesos y la claridad en la toma de decisiones.
 

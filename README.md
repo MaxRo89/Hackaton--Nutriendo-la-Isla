@@ -20,14 +20,40 @@ El proyecto se desarrolla como una demo local con datos ficticios, enfocada en l
 
 ## Problema que resuelve
 
-En muchos contextos, los restaurantes generan comida excedente que, por falta de canales adecuados, termina en desperdicio. Al mismo tiempo, existen personas que podrían beneficiarse de esos alimentos, pero necesitan un proceso claro, respetuoso y verificable para acceder a ellos.
+En muchas comunidades, especialmente en zonas con desigualdad económica, se desperdicia una gran cantidad de alimentos aptos para consumo por falta de canales eficaces para redistribuirlos. Al mismo tiempo, personas que podrían beneficiarse de esos excedentes no tienen un mecanismo claro, seguro y transparente para acceder a ellos.
 
-Nutriendo la Isla busca cerrar esa brecha con una solución sencilla y accesible:
+Muchos restaurantes y organizaciones también carecen de una herramienta simple para publicar excedentes, registrar información clave de manejo y coordinación, y garantizar una revisión responsable del proceso.
+
+Nutriendo la Isla busca cerrar esa brecha con una solución digital sencilla, accesible y centrada en la comunidad:
 
 - restaurantes publican donaciones de manera responsable
 - beneficiarios presentan una solicitud de acceso
 - revisores validan cada caso con criterio humano
-- toda la operación se mantiene en un flujo transparente y controlado
+- la plataforma facilita la coordinación y el seguimiento del proceso
+- la IA acompaña la revisión con sugerencias útiles, sin reemplazar la decisión humana
+
+## Solución
+
+Nutriendo la Isla es una plataforma web diseñada para conectar excedentes de alimentos con personas que necesitan apoyo, reduciendo desperdicio y promoviendo una redistribución más responsable y organizada.
+
+La solución combina:
+
+- publicación de donaciones por parte de restaurantes
+- flujo de solicitud y validación para beneficiarios
+- panel de revisión con decisiones motivadas y apelaciones
+- IA opcional para detectar información faltante y resumir casos de manera neutral
+
+## Impacto
+
+Con esta solución buscamos generar un impacto social y operativo positivo:
+
+- reducir el desperdicio de alimentos
+- facilitar acceso a comida para personas en situación vulnerable
+- fortalecer la colaboración entre restaurantes y comunidad
+- digitalizar la gestión de donaciones de forma responsable y segura
+- crear un modelo replicable para ciudades y comunidades con necesidades similares
+
+Nuestra propuesta no solo optimiza procesos, también genera confianza: la revisión es humana, la toma de decisiones es transparente y la IA solo acompaña, sin automatizar decisiones sensibles.
 
 ## Funcionalidades principales
 
@@ -38,10 +64,11 @@ Nutriendo la Isla busca cerrar esa brecha con una solución sencilla y accesible
 - Descubrimiento de donaciones disponibles por parte de beneficiarios aprobados
 - Solicitudes y confirmación de entrega
 - Panel de revisión con decisiones motivadas y apelaciones
-- IA opcional para apoyar en dos tareas:
-  - revisar si faltan datos críticos en una donación
-  - generar un resumen neutral de la solicitud del beneficiario
-- La IA nunca decide automáticamente aprobación, rechazo o puntaje de personas
+- IA opcional para apoyar tareas concretas y útiles:
+  - detectar si una donación está incompleta y sugerir campos faltantes como alérgenos, conservación, manipulación o información clave para la recogida
+  - resumir de manera neutral la solicitud del beneficiario para ayudar al revisor a revisar más rápido el contexto del caso
+  - apoyar la claridad del proceso sin reemplazar la evaluación humana
+- La IA nunca decide automáticamente aprobación, rechazo o puntaje de personas, ni sustituye la responsabilidad del revisor
 
 ## Stack tecnológico
 
@@ -52,9 +79,10 @@ Nutriendo la Isla busca cerrar esa brecha con una solución sencilla y accesible
 
 ## Reglas de negocio importantes
 
-- La IA no sustituye la decisión humana.
+- La IA ayuda a detectar información faltante y resumir contextos, pero no toma decisiones.
 - La IA no aprueba ni rechaza beneficiarios.
 - La IA no puntúa la necesidad económica ni mide “merecimiento”.
+- El revisor humano siempre valida la solicitud y escribe el motivo de la decisión.
 - Si no hay API key de Gemini, la plataforma sigue funcionando normalmente.
 - Las donaciones y solicitudes se manejan con revisión responsable, sin automatizar decisiones sensibles.
 

@@ -1,0 +1,22 @@
+# Decisiones acordadas
+
+- Demo exclusivamente local con datos ficticios; restaurantes ficticios preautorizados.
+- Fase 2: el registro web de restaurantes crea cuentas sin autorización; solo el comando local prepara cuentas ficticias preautorizadas. El revisor se crea internamente. El comando no sobrescribe ni autoriza cuentas ya existentes.
+- Sesión de ocho horas, una sesión activa por cuenta; login rota el identificador y logout lo revoca en SQLite. Contraseñas con scrypt; no se almacenan tokens en localStorage.
+- Donaciones divisibles: cada solicitud indicará cantidad en la unidad publicada. Solicitar no descuenta existencias; confirmar reserva la cantidad mediante una transacción. Entregar no descontará dos veces.
+- En la fase de reservas se definirán precisión por unidad, cancelación y vencimiento. No utilizar coma flotante para cantidades fraccionarias persistidas.
+- Fase 3: zona aproximada (120 caracteres) y disponibilidad (300) obligatorias solo al enviar. Tamaño del hogar (1–100), frecuencia, transporte, refrigeración y contexto económico (1000 caracteres) opcionales. El borrador puede estar incompleto; guardar o enviar siempre requiere consentimiento `demo-local-v1`.
+- La demo conserva respuestas localmente hasta que su titular elimine la solicitud. La eliminación de borrador o solicitud pendiente borra respuestas y consentimiento sin eliminar la cuenta. Solo usar datos ficticios. El plazo y procedimiento de retención para un piloto real siguen pendientes.
+- Guardar cambios en una solicitud pendiente la devuelve a borrador y retira su envío; reenviar vuelve a dejarla pendiente. Versionado evita sobrescrituras desde pestañas desactualizadas. La revisión y apelación pertenecen a fase 4.
+- El restaurante confirma la entrega; el beneficiario consulta el resultado.
+- Sesiones HttpOnly y CSRF al implementar autenticación; permisos verificados en servidor.
+- Proxy local de Vite para `/api`, sin necesidad de CORS. Backend en 127.0.0.1:5001 para evitar conflictos con AirPlay de macOS; frontend en 127.0.0.1:5173.
+- Punto aproximado seleccionado manualmente, sin domicilios de beneficiarios.
+- Fotografías e IA posteriores al flujo obligatorio. IA desactivada inicialmente.
+- Python 3.11+, React/Vite/Bootstrap 5 y Flask/SQLAlchemy/SQLite. Migraciones desde el inicio.
+- Antes de un piloto real: acordar criterios de participación y sanitarios, responsables, privacidad y retención.
+- Fase 5: piezas y porciones enteras; kg con precisión de 0.001. Persistencia en `quantity_milli` entero (unidad multiplicada por 1000), sin coma flotante para cantidades. Máximo de demo: 100000 unidades por publicación.
+- Perfil propio editable incluso antes de autorización; publicar/listar/cancelar exige restaurante autorizado. La ubicación y contacto del comercio se copian al publicar y no cambian al editar el perfil. Para corregir una publicación se cancela y se crea otra; no se borra el historial.
+- Validación de demo: textos de manipulación/envase, conservación/transporte y alérgenos obligatorios; preparación obligatoria para comida preparada, plazo futuro y confirmación responsable de datos ficticios. No se implementan reglas sanitarias reales ni certificación. Categorías exclusivamente simuladas: panadería, envasado, preparada y fresco.
+- Fase 4: criterios de demo visibles para ambos roles (consentimiento y claridad logística; preguntas opcionales no excluyentes). Revisión solo de envíos pendientes o apelaciones pendientes, con motivo obligatorio. Cada rechazo permite una apelación activa; su resolución puede aprobar, mantener rechazo o pedir aclaración. El mismo rol interno puede resolverla; un piloto deberá definir independencia y responsables.
+- Historial con revisor, fecha, decisión y versión revisada, sin copias adicionales de encuestas. La eliminación permitida de una solicitud editable también elimina su historial asociado. Solicitudes aprobadas/rechazadas no se borran mediante este formulario; tratamiento para piloto pendiente.
